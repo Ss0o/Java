@@ -10,6 +10,8 @@ public class distRect {
         System.out.print("점 (x2,y2)의 좌표를 입력하시오>> ");
         int x2 = sc.nextInt();
         int y2 = sc.nextInt();
+
+        //점 두개중에 하나라도 사각형 안에 있으면 충돌
         if(((inRect(x1,y1,100,100,200,200)) || (inRect(x2,y2,100,100,200,200))))
         {
             System.out.println("사각형들이 충돌합니다.");
@@ -20,6 +22,7 @@ public class distRect {
         }
     }
 
+    //점 x,y가 사각형안에 있는지 확인
     public static boolean inRect(int x, int y, int rectx1, int recty1, int rectx2, int recty2)
     {
         if((x >= rectx1 && x<=rectx2) && (y>=recty1 && y<=recty2))
